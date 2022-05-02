@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { getMeetups } from '../api';
 import { MeetupList } from '../components/MeetupList';
 
-export const AllMeetupsPage = () => {
+export default function AllMeetups() {
     const [loading, setLoading] = useState(true);
     const [meetups, setMeetups] = useState([]);
 
-    // note: without useEffect component will be re-rendered 
+    // note: without useEffect component will be re-rendered
     // on every change of meetups which will cause the infinite loop
     useEffect(() => {
         getMeetups()
@@ -24,4 +24,4 @@ export const AllMeetupsPage = () => {
             <MeetupList meetups={meetups} />
         </div>
     );
-};
+}

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { createMeetup } from '../api';
 import { MeetupForm } from '../components/MeetupForm';
 
-export const NewMeetupPage = () => {
+export default function NewMeetup() {
     const navigate = useNavigate();
 
     const addMeetupHandler = (formData) => {
@@ -15,4 +15,4 @@ export const NewMeetupPage = () => {
             <MeetupForm onAddMeetup={addMeetupHandler} />
         </div>
     );
-};
+}

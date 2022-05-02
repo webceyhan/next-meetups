@@ -1,7 +1,7 @@
 import { MeetupList } from '../components/MeetupList';
 import { useFavoritesContext } from '../store/FavoritesContext';
 
-export const FavoritesPage = () => {
+export default function Favorites() {
     const favoritesCtx = useFavoritesContext();
 
     let content;
@@ -18,4 +18,4 @@ export const FavoritesPage = () => {
             {content}
         </section>
     );
-};
+}
