@@ -1,9 +1,10 @@
 import '../styles/globals.css';
+import { Layout } from '../components/Layout/Layout';
 
 export default function MyApp({ Component, pageProps }) {
     return (
-        <div className="container py-5">
+        <Layout>
             <Component {...pageProps} />
-        </div>
+        </Layout>
     );
 }
