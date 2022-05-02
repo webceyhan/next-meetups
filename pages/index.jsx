@@ -1,4 +1,4 @@
-import { getMeetups } from '../api';
+import { fetchMeetups } from '../lib/fetch-meetups';
 import { MeetupList } from '../components/MeetupList';
 
 export default function Home({ meetups }) {
@@ -19,7 +19,7 @@ export default function Home({ meetups }) {
  * And our Meetup data barely changes so it's a good idea to cache it.
  */
 export async function getStaticProps() {
-    const meetups = await getMeetups();
+    const meetups = await fetchMeetups();
 
     // this props will be passed to the page component as props
     return {
