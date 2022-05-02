@@ -28,6 +28,7 @@ export const MeetupForm = ({ onAddMeetup }) => {
                 <form onSubmit={submitHandler}>
                     <FormInput
                         innerRef={titleInput}
+                        id="title"
                         label="Title"
                         // note: ref should be innerRef for custom components
                         required
@@ -35,6 +36,7 @@ export const MeetupForm = ({ onAddMeetup }) => {
 
                     <FormInput
                         innerRef={imageInput}
+                        id="image"
                         label="Image"
                         type="url"
                         required
@@ -42,11 +44,13 @@ export const MeetupForm = ({ onAddMeetup }) => {
 
                     <FormInput
                         innerRef={addressInput}
+                        id="address"
                         label="Address"
                         required
                     />
                     <FormInput
                         innerRef={descriptionInput}
+                        id="description"
                         label="Description"
                         type="textarea"
                         required
