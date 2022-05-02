@@ -1,10 +1,16 @@
+import { useRouter } from 'next/router';
 import { useFavoritesContext } from '../store/FavoritesContext';
 import { Card } from './ui/Card';
 import { CardBody } from './ui/CardBody';
 
 export const MeetupListItem = ({ meetup }) => {
+    const router = useRouter();
     const favoritesCtx = useFavoritesContext();
     const isFavorite = favoritesCtx.isFavorite(meetup);
+
+    const clickDetailHandler = () => {
+        router.push(`/meetups/${meetup.id}`);
+    };
 
     const toggleFavoriteHandler = () => {
         if (isFavorite) {
@@ -25,6 +31,13 @@ export const MeetupListItem = ({ meetup }) => {
             <CardBody>
                 <h5 className="card-title">{meetup.title}</h5>
                 <p className="card-text">{meetup.description}</p>
+
+                <button
+                    className="btn btn-primary me-2"
+                    onClick={clickDetailHandler}
+                >
+                    Show Details
+                </button>
 
                 <button
                     className={`btn btn-${isFavorite ? 'danger' : 'primary'}`}
