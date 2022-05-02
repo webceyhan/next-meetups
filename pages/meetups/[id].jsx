@@ -1,13 +1,18 @@
 import { MeetupDetail } from '../../components/MeetupDetail';
 import { findMeetup } from '../../lib/find-meetup';
 import { fetchMeetups } from '../../lib/fetch-meetups';
+import Head from 'next/head';
 
 export default function MeetupDetailPage({ meetup }) {
     return (
-        <div>
+        <>
+            <Head>
+                <title>{meetup.title}</title>
+            </Head>
+
             <h1>Meetup Detail Page</h1>
             <MeetupDetail meetup={meetup} />
-        </div>
+        </>
     );
 }
 
