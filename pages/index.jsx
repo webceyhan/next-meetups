@@ -7,6 +7,10 @@ export default function Home({ meetups }) {
         <>
             <Head>
                 <title>Next.js Meetups</title>
+                <meta
+                    name="description"
+                    content="great next.js meetups tutorial"
+                />
             </Head>
 
             <h1>All Meetups</h1>
