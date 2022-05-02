@@ -1,1 +1,16 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    padding-top: 80px;
+    background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.3),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('./assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bg-purple {
+    background-color: rgba(150, 15, 80, 0.85);
+}
