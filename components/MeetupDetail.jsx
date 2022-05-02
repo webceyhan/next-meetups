@@ -16,15 +16,14 @@ export const MeetupDetail = ({ meetup }) => {
         <>
             <img
                 src={meetup.image}
-                className="img-fluid"
-                style={{ height: '250px', objectFit: 'cover' }}
+                className="img-fluid w-100"
+                style={{ height: '350px', objectFit: 'cover' }}
                 alt={meetup.title}
             />
 
-            <section>
-                <h1 className="display-5">{meetup.title}</h1>
-
-                <p className="lead">{meetup.description}</p>
+            <section className="bg-light bg-opacity-75 p-3">
+                <h4 className="mb-3">{meetup.title}</h4>
+                <p className="mb-3">{meetup.description}</p>
 
                 <button
                     className={`btn btn-${isFavorite ? 'danger' : 'primary'}`}
