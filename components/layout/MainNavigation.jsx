@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useFavoritesContext } from '../../store/FavoritesContext';
 import { NavLink } from './NavLink';
 
@@ -9,8 +9,8 @@ export const MainNavigation = () => {
     return (
         <nav className="navbar fixed-top navbar-expand navbar-dark bg-purple">
             <div className="container py-1">
-                <Link className="navbar-brand" to="/">
-                    ReactMeetups
+                <Link href="/">
+                    <a className="navbar-brand">ReactMeetups</a>
                 </Link>
                 <button
                     type="button"
@@ -23,13 +23,13 @@ export const MainNavigation = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <NavLink to="/all">All Meetups</NavLink>
+                            <NavLink href="/">All Meetups</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/new">Add New Meetup</NavLink>
+                            <NavLink href="/new-meetup">Add New Meetup</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/favorites">
+                            <NavLink href="/favorites">
                                 My Favorites
                                 <span className="badge bg-danger ms-2">
                                     {favoriteTotal}

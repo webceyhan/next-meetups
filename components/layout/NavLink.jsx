@@ -1,12 +1,14 @@
-import { NavLink as RouterNavLink } from 'react-router-dom';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 
-export const NavLink = (props) => {
+export const NavLink = ({ children, ...props }) => {
+    const router = useRouter();
+    const isActive = router.pathname === props.href;
+    const activeClass = isActive ? 'active' : '';
+
     return (
-        <RouterNavLink
-            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-            to={props.to}
-        >
-            {props.children}
-        </RouterNavLink>
+        <NextLink {...props}>
+            <a className={`nav-link ${activeClass}`}>{children}</a>
+        </NextLink>
     );
 };
