@@ -22,15 +22,18 @@ export const MeetupDetail = ({ meetup }) => {
             />
 
             <section className="bg-light bg-opacity-75 p-3">
-                <h4 className="mb-3">{meetup.title}</h4>
-                <p className="mb-3">{meetup.description}</p>
+                <div className="d-flex justify-content-between align-items-start mb-2">
+                    <h4 className='me-2'>{meetup.title}</h4>
 
-                <button
-                    className={`btn btn-${isFavorite ? 'danger' : 'primary'}`}
-                    onClick={toggleFavoriteHandler}
-                >
-                    {isFavorite ? 'Remove from favorites' : 'Add to favorites'}
-                </button>
+                    <button
+                        className="btn btn-outline-primary text-nowrap"
+                        onClick={toggleFavoriteHandler}
+                    >
+                        {isFavorite ? '❤️ Remove' : '❤️ Add'}
+                    </button>
+                </div>
+
+                <p className="mb-3">{meetup.description}</p>
             </section>
         </>
     );
