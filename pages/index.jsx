@@ -1,12 +1,17 @@
 import { fetchMeetups } from '../lib/fetch-meetups';
 import { MeetupList } from '../components/MeetupList';
+import Head from 'next/head';
 
 export default function Home({ meetups }) {
     return (
-        <div>
+        <>
+            <Head>
+                <title>Next.js Meetups</title>
+            </Head>
+
             <h1>All Meetups</h1>
             <MeetupList meetups={meetups} />
-        </div>
+        </>
     );
 }
 
