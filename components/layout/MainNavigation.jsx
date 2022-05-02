@@ -30,8 +30,8 @@ export const MainNavigation = () => {
                         <li className="nav-item">
                             <NavLink href="/favorites">
                                 My Favorites
-                                <span className="badge bg-danger ms-2">
-                                    {favoriteTotal}
+                                <span className="badge bg-dark bg-opacity-50 ms-2">
+                                ❤️ {favoriteTotal}
                                 </span>
                             </NavLink>
                         </li>

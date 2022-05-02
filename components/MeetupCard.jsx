@@ -51,10 +51,10 @@ export const MeetupCard = ({ meetup }) => {
                 </button>
 
                 <button
-                    className={`btn btn-${isFavorite ? 'danger' : 'primary'}`}
+                    className="btn btn-outline-primary"
                     onClick={toggleFavoriteHandler}
                 >
-                    {isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+                    {isFavorite ? '❤️ Remove' : '❤️ Add'}
                 </button>
             </CardBody>
         </Card>
