@@ -3,7 +3,7 @@ import { useFavoritesContext } from '../store/FavoritesContext';
 import { Card } from './ui/Card';
 import { CardBody } from './ui/CardBody';
 
-export const MeetupListItem = ({ meetup }) => {
+export const MeetupCard = ({ meetup }) => {
     const router = useRouter();
     const favoritesCtx = useFavoritesContext();
     const isFavorite = favoritesCtx.isFavorite(meetup);
