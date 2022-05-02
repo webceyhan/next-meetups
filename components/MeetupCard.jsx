@@ -44,14 +44,14 @@ export const MeetupCard = ({ meetup }) => {
                 </p>
 
                 <button
-                    className="btn btn-primary me-2"
+                    className="btn btn-sm btn-primary me-2"
                     onClick={clickDetailHandler}
                 >
                     Show Details
                 </button>
 
                 <button
-                    className="btn btn-outline-primary"
+                    className="btn btn-sm btn-outline-primary"
                     onClick={toggleFavoriteHandler}
                 >
                     {isFavorite ? '❤️ Remove' : '❤️ Add'}
