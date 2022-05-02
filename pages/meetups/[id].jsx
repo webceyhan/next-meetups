@@ -1,5 +1,6 @@
 import { MeetupDetail } from '../../components/MeetupDetail';
-import { findMeetup, getMeetups } from '../../api';
+import { findMeetup } from '../../lib/find-meetup';
+import { fetchMeetups } from '../../lib/fetch-meetups';
 
 export default function MeetupDetailPage({ meetup }) {
     return (
@@ -46,7 +47,7 @@ export async function getStaticProps({ params }) {
  */
 export async function getStaticPaths() {
     // First we get all the meetups
-    const meetups = await getMeetups();
+    const meetups = await fetchMeetups();
 
     // Then we generate an array of paths
     const paths = meetups.map(({ id }) => ({ params: { id } }));
