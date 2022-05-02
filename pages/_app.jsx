@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { Layout } from '../components/Layout/Layout';
+import { Layout } from '../components/layout/Layout';
 import { FavoritesContextProvider } from '../store/FavoritesContext';
 
 export default function MyApp({ Component, pageProps }) {
