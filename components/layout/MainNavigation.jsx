@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useFavoritesContext } from '../../store/FavoritesContext';
 import { NavLink } from './NavLink';
 
@@ -9,9 +8,9 @@ export const MainNavigation = () => {
     return (
         <nav className="navbar fixed-top navbar-expand navbar-dark bg-purple">
             <div className="container py-1">
-                <Link href="/">
-                    <a className="navbar-brand">ReactMeetups</a>
-                </Link>
+                <NavLink href="/" brand>
+                    ReactMeetups
+                </NavLink>
                 <button
                     type="button"
                     className="navbar-toggler"
