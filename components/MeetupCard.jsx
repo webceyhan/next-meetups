@@ -29,8 +29,19 @@ export const MeetupCard = ({ meetup }) => {
                 alt={meetup.title}
             />
             <CardBody>
-                <h5 className="card-title">{meetup.title}</h5>
-                <p className="card-text">{meetup.description}</p>
+                <h6 className="card-title">
+                    {/* truncate long title */}
+                    {meetup.title.length > 20
+                        ? meetup.title.substring(0, 20) + '...'
+                        : meetup.title}
+                </h6>
+
+                <p className="card-text text-muted">
+                    {/* truncate long descriptions */}
+                    {meetup.description.length > 100
+                        ? meetup.description.substring(0, 100) + '...'
+                        : meetup.description}
+                </p>
 
                 <button
                     className="btn btn-primary me-2"
